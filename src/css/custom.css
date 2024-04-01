@@ -5,26 +5,49 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=JetBrains+Mono&display=swap');
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #d4081c;
+  --ifm-color-primary-dark: #bf0719;
+  --ifm-color-primary-darker: #b40718;
+  --ifm-color-primary-darkest: #940614;
+  --ifm-color-primary-light: #e9091f;
+  --ifm-color-primary-lighter: #f40920;
+  --ifm-color-primary-lightest: #f7273c;
+  --ifm-font-family-base: 'Roboto', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #f07167;
+  --ifm-color-primary-dark: #ed5448;
+  --ifm-color-primary-darker: #eb4538;
+  --ifm-color-primary-darkest: #db2416;
+  --ifm-color-primary-light: #f38e86;
+  --ifm-color-primary-lighter: #f59d96;
+  --ifm-color-primary-lightest: #f9c8c5;
+  --ifm-font-family-base: 'Roboto', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px) saturate(160%);
+  transition: background 0.3s ease-in-out;
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px) saturate(160%);
+  transition: background 0.3s ease-in-out;
+}
+
+.table-of-contents__link--active,
+.table-of-contents__link:hover {
+  font-weight: bold;
 }
