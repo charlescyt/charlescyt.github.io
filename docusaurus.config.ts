@@ -52,7 +52,7 @@ const config: Config = {
     },
     announcementBar: {
       id: 'announcement-bar-01',
-      content: 'New blog post released: <a href="/blog/dart-static-analysis-and-lint-rules">Dart static analysis and lint rules</a>',
+      content: 'New blog post released: <a href="/dart-static-analysis-and-lint-rules">Dart static analysis and lint rules</a>',
       backgroundColor: '#d4081c',
       textColor: '#FFF',
     },
