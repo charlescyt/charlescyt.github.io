@@ -5,7 +5,7 @@ authors: [charles]
 tags: [dart, flutter, static analysis, lint rules]
 ---
 
-import cover from './cover.jpeg';
+import cover from './cover.png';
 
 <img src={cover} alt="Cover" class="cover"> </img>
 
