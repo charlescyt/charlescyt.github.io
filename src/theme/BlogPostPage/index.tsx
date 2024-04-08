@@ -1,16 +1,19 @@
-import React, {type ReactNode} from 'react';
-import clsx from 'clsx';
-import {HtmlClassNameProvider, ThemeClassNames} from '@docusaurus/theme-common';
-import {BlogPostProvider, useBlogPost} from '@docusaurus/theme-common/internal';
+import type { BlogSidebar } from '@docusaurus/plugin-content-blog';
+import { HtmlClassNameProvider, ThemeClassNames } from '@docusaurus/theme-common';
+import { BlogPostProvider, useBlogPost } from '@docusaurus/theme-common/internal';
 import BlogLayout from '@theme/BlogLayout';
 import BlogPostItem from '@theme/BlogPostItem';
-import BlogPostPaginator from '@theme/BlogPostPaginator';
+import type { Props } from '@theme/BlogPostPage';
 import BlogPostPageMetadata from '@theme/BlogPostPage/Metadata';
 import BlogPostPageStructuredData from '@theme/BlogPostPage/StructuredData';
+import BlogPostPaginator from '@theme/BlogPostPaginator';
 import TOC from '@theme/TOC';
-import type {Props} from '@theme/BlogPostPage';
 import Unlisted from '@theme/Unlisted';
-import type {BlogSidebar} from '@docusaurus/plugin-content-blog';
+import clsx from 'clsx';
+import { type ReactNode } from 'react';
+
+import GiscusComment from '@site/src/components/Giscus';
+
 
 function BlogPostPageContent({
   sidebar,
@@ -19,12 +22,13 @@ function BlogPostPageContent({
   sidebar: BlogSidebar;
   children: ReactNode;
 }): JSX.Element {
-  const {metadata, toc} = useBlogPost();
-  const {nextItem, prevItem, frontMatter, unlisted} = metadata;
+  const { metadata, toc } = useBlogPost();
+  const { nextItem, prevItem, frontMatter, unlisted } = metadata;
   const {
     hide_table_of_contents: hideTableOfContents,
     toc_min_heading_level: tocMinHeadingLevel,
     toc_max_heading_level: tocMaxHeadingLevel,
+    no_comments
   } = frontMatter;
   return (
     <BlogLayout
@@ -41,6 +45,10 @@ function BlogPostPageContent({
       {unlisted && <Unlisted />}
 
       <BlogPostItem>{children}</BlogPostItem>
+
+      {!no_comments && (
+        <GiscusComment />
+      )}
 
       {(nextItem || prevItem) && (
         <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
