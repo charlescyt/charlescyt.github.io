@@ -3,73 +3,72 @@ import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 
 const config: Config = {
-  title: 'Charles\'s Blog',
-  tagline: 'I dart, I flutter, I wonder.',
-  favicon: 'img/favicon.ico',
-  url: 'https://charlescyt.github.io',
+  title: "Charles's Blog",
+  tagline: "I dart, I flutter, I wonder.",
+  favicon: "img/favicon.ico",
+  url: "https://charlescyt.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'charlescyt',
-  projectName: 'charlescyt.github.io',
+  organizationName: "charlescyt",
+  projectName: "charlescyt.github.io",
   trailingSlash: false,
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: false,
         blog: {
-          path: 'blog',
-          routeBasePath: '/',
-          blogSidebarTitle: 'Recent Posts',
+          path: "blog",
+          routeBasePath: "/",
+          blogSidebarTitle: "Recent Posts",
           blogSidebarCount: 5,
           showReadingTime: true,
           readingTime: ({ content, frontMatter, defaultReadingTime }) =>
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
-          blogListComponent: '@theme/BlogListPage',
-          blogPostComponent: '@theme/BlogPostPage',
-          blogTagsListComponent: '@theme/BlogTagsListPage',
-          blogTagsPostsComponent: '@theme/BlogTagsPostsPage',
+          blogListComponent: "@theme/BlogListPage",
+          blogPostComponent: "@theme/BlogPostPage",
+          blogTagsListComponent: "@theme/BlogTagsListPage",
+          blogTagsPostsComponent: "@theme/BlogTagsPostsPage",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
         gtag: {
-          trackingID: 'G-7MD5NX3P7S',
+          trackingID: "G-7MD5NX3P7S",
           anonymizeIP: true,
         },
       } satisfies Preset.Options,
     ],
   ],
   themeConfig: {
-    image: 'img/social-card.webp',
+    image: "img/social-card.webp",
     colorMode: {
       defaultMode: "dark",
     },
     announcementBar: {
-      id: 'announcement-bar-01',
-      content: 'New blog post released: <a href="/dart-static-analysis-and-lint-rules">Dart static analysis and lint rules</a>',
-      backgroundColor: '#d4081c',
-      textColor: '#FFF',
+      id: "announcement-bar-01",
+      content: 'New blog post: <a href="/riverpod-basics">Riverpod Basics</a>',
+      backgroundColor: "#d4081c",
+      textColor: "#FFF",
     },
     navbar: {
       logo: {
-        alt: 'Logo',
-        src: 'img/logo.webp',
+        alt: "Logo",
+        src: "img/logo.webp",
       },
-      items: [
-      ],
+      items: [],
     },
     footer: {
-      style: 'light',
+      style: "light",
       logo: {
         alt: "Logo",
         href: "/",
@@ -79,16 +78,16 @@ const config: Config = {
       },
       links: [
         {
-          label: 'GitHub',
-          href: 'https://github.com/charlescyt',
+          label: "GitHub",
+          href: "https://github.com/charlescyt",
         },
         {
-          label: 'Twitter',
-          href: 'https://twitter.com/_charlescyt',
+          label: "Twitter",
+          href: "https://twitter.com/_charlescyt",
         },
         {
-          label: 'Stack Overflow',
-          href: 'https://stackoverflow.com/users/22174275/charles',
+          label: "Stack Overflow",
+          href: "https://stackoverflow.com/users/22174275/charles",
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Charles Tsang.`,
@@ -96,16 +95,10 @@ const config: Config = {
     prism: {
       theme: prismThemes.oneLight,
       darkTheme: prismThemes.oneDark,
-      additionalLanguages: [
-        'bash',
-        'dart',
-        'java',
-        'json',
-      ],
+      additionalLanguages: ["bash", "dart", "java", "json"],
     },
   } satisfies Preset.ThemeConfig,
-  plugins: [
-  ],
+  plugins: [],
 };
 
 export default config;

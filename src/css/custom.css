@@ -59,3 +59,10 @@
   margin-bottom: 8px;
   object-fit: contain;
 }
+
+.screenshot {
+  display: block;
+  border-radius: 16px;
+  text-align: center;
+  margin: auto auto var(--ifm-paragraph-margin-bottom);
+}
