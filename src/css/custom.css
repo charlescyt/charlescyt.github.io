@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=JetBrains+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=JetBrains+Mono&display=swap");
 
 :root {
   --ifm-color-primary: #d4081c;
@@ -16,13 +16,13 @@
   --ifm-color-primary-light: #e9091f;
   --ifm-color-primary-lighter: #f40920;
   --ifm-color-primary-lightest: #f7273c;
-  --ifm-font-family-base: 'Roboto', sans-serif;
-  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
+  --ifm-font-family-base: "Roboto", sans-serif;
+  --ifm-font-family-monospace: "JetBrains Mono", monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #f07167;
   --ifm-color-primary-dark: #ed5448;
   --ifm-color-primary-darker: #eb4538;
@@ -30,8 +30,8 @@
   --ifm-color-primary-light: #f38e86;
   --ifm-color-primary-lighter: #f59d96;
   --ifm-color-primary-lightest: #f9c8c5;
-  --ifm-font-family-base: 'Roboto', sans-serif;
-  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
+  --ifm-font-family-base: "Roboto", sans-serif;
+  --ifm-font-family-monospace: "JetBrains Mono", monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -41,7 +41,7 @@
   transition: background 0.3s ease-in-out;
 }
 
-[data-theme='dark'] .navbar {
+[data-theme="dark"] .navbar {
   background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(5px) saturate(160%);
   transition: background 0.3s ease-in-out;
@@ -65,4 +65,12 @@
   border-radius: 16px;
   text-align: center;
   margin: auto auto var(--ifm-paragraph-margin-bottom);
+}
+
+.blog-list-page h2[class*="title"] {
+  font-size: 2rem;
+}
+
+.blog-post-page h1[class*="title"] {
+  font-size: 2rem;
 }
