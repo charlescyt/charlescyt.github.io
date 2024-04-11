@@ -4,17 +4,17 @@ title: Riverpod Basics
 authors: [charles]
 tags: [flutter, riverpod, state management]
 keywords: [flutter, riverpod, state management, provider, notifier]
-image: cover.png
+image: /img/covers/riverpod-basics.png
 description: Riverpod is a state management library for Dart and Flutter applications. It offers exceptional flexibility, providing features such as provider-to-provider interaction and customisable lifecycles for individual providers. Riverpod is particularly useful for handling and caching asynchronous operations such as fetching data from an API.
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import cover from './cover.png';
 import provider from './provider.png';
 import notifier from './notifier.png';
 
-<img src={cover} alt="Cover" class="cover"> </img>
+<img src={useBaseUrl('/img/covers/riverpod-basics.png')} alt="Cover" class="cover"> </img>
 
 Riverpod is a state management library for Dart and Flutter applications. It offers exceptional flexibility, providing features such as provider-to-provider interaction and customisable lifecycles for individual providers. Riverpod is particularly useful for handling and caching asynchronous operations such as fetching data from an API. In this article, we will explore the basic concepts of Riverpod.
 

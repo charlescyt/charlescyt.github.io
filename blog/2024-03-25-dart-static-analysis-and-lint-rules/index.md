@@ -4,13 +4,13 @@ title: Dart static analysis and lint rules
 authors: [charles]
 tags: [dart, flutter, static analysis, lint rules]
 keywords: [dart, flutter, static analysis, lint rules, dart analyzer, analysis options]
-image: cover.png
+image: /img/covers/dart-static-analysis-and-lint-rules.png
 description: Static analysis and lint rules are essential tools for maintaining code quality and consistency in Dart and Flutter projects. In this article, we will discuss the importance of static analysis and lint rules, how they work, and how you can leverage them to improve the quality of your codebase.
 ---
 
-import cover from './cover.png';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-<img src={cover} alt="Cover" class="cover"> </img>
+<img src={useBaseUrl('/img/covers/dart-static-analysis-and-lint-rules.png')} alt="Cover" class="cover"> </img>
 
 Static analysis and lint rules are essential tools for maintaining code quality and consistency in Dart and Flutter projects. In this article, we will discuss the importance of static analysis and lint rules, how they work, and how you can leverage them to improve the quality of your codebase.
 
