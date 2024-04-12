@@ -1,6 +1,6 @@
-import type * as Preset from '@docusaurus/preset-classic';
-import type { Config } from '@docusaurus/types';
-import { themes as prismThemes } from 'prism-react-renderer';
+import type * as Preset from "@docusaurus/preset-classic";
+import type { Config } from "@docusaurus/types";
+import { themes as prismThemes } from "prism-react-renderer";
 
 const config: Config = {
   title: "Charles's Blog",
@@ -55,8 +55,8 @@ const config: Config = {
       defaultMode: "dark",
     },
     announcementBar: {
-      id: "announcement-bar-01",
-      content: 'New blog post: <a href="/riverpod-basics">Riverpod Basics</a>',
+      id: "announcement-03", // Increment on change
+      content: 'New blog post: <a href="/riverpod-code-generation">Riverpod Code Generation</a>',
       backgroundColor: "#d4081c",
       textColor: "#FFF",
     },

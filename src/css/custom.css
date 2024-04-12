@@ -74,3 +74,19 @@
 .blog-post-page h1[class*="title"] {
   font-size: 2rem;
 }
+
+kbd {
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: bold;
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #333;
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  white-space: nowrap;
+}
