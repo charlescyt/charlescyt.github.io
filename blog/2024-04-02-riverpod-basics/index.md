@@ -11,8 +11,8 @@ description: Riverpod is a state management library for Dart and Flutter applica
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import provider from './provider.png';
-import notifier from './notifier.png';
+import ProviderSyntax from './provider-syntax.png';
+import NotifierSyntax from './notifier-syntax.png';
 
 <img src={useBaseUrl('/img/covers/riverpod-basics.png')} alt="Cover" class="cover"> </img>
 
@@ -33,11 +33,11 @@ At the time of writing, the version of Riverpod and related packages are as foll
 
 ## Which package to use?
 
-What's the difference between `riverpod`, `flutter_riverpod`, and `hooks_riverpod`?
+What's the difference between [riverpod], [flutter_riverpod], and [hooks_riverpod]?
 
-- `riverpod`: provides the core functionality of Riverpod. It doesn't depend on Flutter.
-- `flutter_riverpod`: re-exports `riverpod` and provides integration with Flutter.
-- `hooks_riverpod`: re-exports `flutter_riverpod` and provides integration with `flutter_hooks`.
+- [riverpod]: provides the core functionality of Riverpod. It doesn't depend on Flutter.
+- [flutter_riverpod]: re-exports [riverpod] and provides integration with Flutter.
+- [hooks_riverpod]: re-exports [flutter_riverpod] and provides integration with [flutter_hooks].
 
 To add riverpod to your project, run the following command:
 
@@ -64,9 +64,9 @@ flutter pub add flutter_hooks
 
 Riverpod provides a code generation tool to reduce boilerplate code and enhance developer experience.
 
-- `riverpod_annotation`: provides annotations for `riverpod_generator`.
-- `riverpod_generator`: generates code for providers and notifiers.
-- `build_runner`: provides a concrete way of generating files using Dart code.
+- [riverpod_annotation]: provides annotations for [riverpod_generator].
+- [riverpod_generator]: generates code for providers and notifiers.
+- [build_runner]: provides a concrete way of generating files using Dart code.
 
 To use the code generation tool, run the following command:
 
@@ -94,9 +94,9 @@ It is recommended to use code generation with Riverpod to reduce boilerplate cod
 
 :::
 
-`riverpod_lint` is a package that provides additional lint rules and quick fixes specific to Riverpod.
+[riverpod_lint] is a package that provides additional lint rules and quick fixes specific to Riverpod.
 
-To use `riverpod_lint`, run the following command:
+To use [riverpod_lint], run the following command:
 
 <Tabs groupId="environment" defaultValue="flutter">
 <TabItem value="dart" label="Dart">
@@ -114,7 +114,7 @@ flutter pub add dev:riverpod_lint
 </TabItem>
 </Tabs>
 
-Remember to enable `custom_lint`  in your `analysis_options.yaml` file.
+Remember to enable [custom_lint]  in your `analysis_options.yaml` file.
 
 ```yaml title="analysis_options.yaml"
 analyzer:
@@ -124,7 +124,7 @@ analyzer:
 
 :::tip
 
-It is recommended to use `riverpod_lint` to ensure that you are following best practices when using Riverpod.
+It is recommended to use [riverpod_lint] to ensure that you are following best practices when using Riverpod.
 
 :::
 
@@ -138,7 +138,7 @@ You could skip this section if you are not interested in the details of the pack
 
 :::
 
-If we look at the source code of the `flutter_riverpod` package.
+If we look at the source code of the [flutter_riverpod] package.
 
 ```dart title="flutter_riverpod/lib/flutter_riverpod.dart
 export 'package:riverpod/riverpod.dart';
@@ -148,13 +148,13 @@ export 'src/consumer.dart';
 export 'src/framework.dart' hide ProviderScopeState;
 ```
 
-It re-exports `riverpod` along with 3 additional files:
+It re-exports [riverpod] along with 3 additional files:
 
 - `change_notifier_provider.dart`: adds support for `ChangeNotifier`, a built-in class in the Flutter framework for simple state management.
 - `consumer.dart`: adds `ConsumerWidget`, `ConsumerStatefulWidget`, and `Consumer` which are widgets that can interact with providers.
 - `framework.dart`: adds `ProviderScope` which stores the state of the providers.
 
-Let's also have a look at the `hooks_riverpod` package.
+Let's also have a look at the [hooks_riverpod] package.
 
 ```dart title="hooks_riverpod/lib/hooks_riverpod.dart
 export 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -162,13 +162,13 @@ export 'package:flutter_riverpod/flutter_riverpod.dart';
 export 'src/consumer.dart';
 ```
 
-It re-exports `flutter_riverpod` along with 1 additional file:
+It re-exports [flutter_riverpod] along with 1 additional file:
 
 - `consumer.dart`: adds `HookConsumerWidget`, `StatefulHookConsumerWidget` and `HookConsumer` which are widgets that can both use hooks and interact with providers.
 
 :::info
 
-Notice that `hooks_riverpod` does not re-export `flutter_hooks` meaning that you need to add it separately to your `pubspec.yaml` file.
+Notice that [hooks_riverpod] does not re-export [flutter_hooks] meaning that you need to add it separately to your `pubspec.yaml` file.
 
 :::
 
@@ -223,7 +223,7 @@ Syntax to define a provider:
 - The optional modifier could be `autoDispose`, `family` or both.
 - The provider should be initialised with a function that returns the initial state. The `Ref` object is available in the function to interact with other providers. It is recommended to use `Ref.watch` instead of `Ref.read` and `Ref.listen` in the function.
 
-<img src={provider} alt="Provider" class="screenshot"> </img>
+<img src={ProviderSyntax} alt="Provider Syntax" class="screenshot"> </img>
 
 Syntax to define a notifier and its provider:
 
@@ -237,7 +237,7 @@ Syntax to define a notifier and its provider:
 - The optional modifier could be `autoDispose`, `family` or both. Note that the modifiers and the notifier type should match.
 - The notifier provider should be initialised with a function that returns an instance of the notifier class. Typically a constructor tear-off is used.
 
-<img src={notifier} alt="Notifier" class="screenshot"> </img>
+<img src={NotifierSyntax} alt="Notifier Syntax" class="screenshot"> </img>
 
 Manually defining providers and notifiers can be cumbersome and error-prone. If you are using vscode, consider using [Flutter Riverpod Snippets] to define providers and notifiers with code snippets.
 
@@ -351,7 +351,7 @@ To expose a public api to mutate the state, consider using a [StreamNotifier and
 
 :::
 
-### Notifier and NotifierProvider
+### NotifierProvider
 
 `Notifier` is a class to manage a state and centralise the logic of mutating the state.
 
@@ -381,7 +381,7 @@ If it is not required to expose a public api to mutate the state, consider using
 
 :::
 
-### AsyncNotifier and AsyncNotifierProvider
+### AsyncNotifierProvider
 
 Use `AsyncNotifier` and `AsyncNotifierProvider` to manage the state of an asynchronous operation (Future) and expose public apis to mutate the state. Similar to `FutureProvider`, Riverpod will convert the `Future` into an `AsyncValue` to represent the state of the asynchronous operation.
 
@@ -434,7 +434,7 @@ If it is not required to expose a public api to mutate the state, consider using
 
 :::
 
-### StreamNotifier and StreamNotifierProvider
+### StreamNotifierProvider
 
 Use `StreamNotifier` and `StreamNotifierProvider` to manage the state of an asynchronous operation (Stream) and expose public apis to mutate the state. Similar to `StreamProvider`, Riverpod will convert the `Stream` into an `AsyncValue` to represent the state of the asynchronous operation.
 
@@ -514,7 +514,7 @@ class CounterWidget extends ConsumerWidget {
 
 Notice that the logic for modifying the counter is defined in the widget itself instead of being centralised in a `Notifier` class.
 
-### ChangeNotifier and ChangeNotifierProvider
+### ChangeNotifierProvider
 
 :::warning
 
@@ -565,7 +565,7 @@ class CounterWidget extends ConsumerWidget {
 
 :::
 
-### StateNotifier and StateNotifierProvider
+### StateNotifierProvider
 
 :::warning
 
@@ -1349,7 +1349,10 @@ If you want to learn more about Riverpod, visit the [official website][Riverpod]
 [hooks_riverpod]: https://pub.dev/packages/hooks_riverpod
 [riverpod_annotation]: https://pub.dev/packages/riverpod_annotation
 [riverpod_generator]: https://pub.dev/packages/riverpod_generator
+[build_runner]: https://pub.dev/packages/build_runner
 [riverpod_lint]: https://pub.dev/packages/riverpod_lint
+[custom_lint]: https://pub.dev/packages/custom_lint
+[flutter_hooks]: https://pub.dev/packages/flutter_hooks
 [http]: https://pub.dev/packages/http
 [Provider]: https://pub.dev/documentation/riverpod/latest/riverpod/Provider-class.html
 [FutureProvider]: https://pub.dev/documentation/riverpod/latest/riverpod/FutureProvider-class.html
