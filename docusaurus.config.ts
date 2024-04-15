@@ -55,8 +55,8 @@ const config: Config = {
       defaultMode: "dark",
     },
     announcementBar: {
-      id: "announcement-03", // Increment on change
-      content: 'New blog post: <a href="/riverpod-code-generation">Riverpod Code Generation</a>',
+      id: "announcement-04", // Increment on change
+      content: 'New devlog post: <a href="/chill-guide-devlog-1">Chill Guide Devlog #1</a>',
       backgroundColor: "#d4081c",
       textColor: "#FFF",
     },
