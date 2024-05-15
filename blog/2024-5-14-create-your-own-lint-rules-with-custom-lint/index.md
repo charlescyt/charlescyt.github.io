@@ -3,7 +3,7 @@ slug: create-your-own-lint-rules-with-custom-lint
 title: Create your own lint rules with custom lint
 authors: [charles]
 tags: [dart, flutter, lint rules, custom_lint]
-image: /img/covers/custom-lint.png
+image: /img/covers/create-your-own-lint-rules-with-custom-lint.png
 description: In this article, we will explore the process of creating custom lint rules for Dart and Flutter projects. We will create a custom lint rule that warns developers when they use `print` statements in their code and provides a quick fix to replace the `print` statement with `log` from the `developer` package.
 ---
 
