@@ -55,8 +55,8 @@ const config: Config = {
       defaultMode: "dark",
     },
     announcementBar: {
-      id: "announcement-04", // Increment on change
-      content: 'New devlog post: <a href="/chill-guide-devlog-1">Chill Guide Devlog #1</a>',
+      id: "announcement-05", // Increment on change
+      content: 'New blog post: <a href="/create-your-own-lint-rules-with-custom-lint">Create Your Own Lint Rules with Custom Lint</a>',
       backgroundColor: "#d4081c",
       textColor: "#FFF",
     },
