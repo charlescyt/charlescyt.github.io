@@ -384,7 +384,7 @@ To learn more about creating custom lint rules with [custom_lint], you can check
 
 ## Conclusion
 
-In this article, we explored the process of creating a custom lint rule that warns developers when they use `print` statements in their code and provides a quick fix to replace the `print` statement with `log` from the `developer` package. You can find the complete example on [GitHub](repo).
+In this article, we explored the process of creating a custom lint rule that warns developers when they use `print` statements in their code and provides a quick fix to replace the `print` statement with `log` from the `developer` package. You can find the complete example on [GitHub][repo].
 
 As we explored the implementation details, we briefly introduced the [analyzer] package, which are essential in the development of custom lint rules. Additionally, we discussed how to debug custom lint rules using print statements and the Dart debugger.
 
